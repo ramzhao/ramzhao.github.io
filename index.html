@@ -25,7 +25,7 @@
         </div>
            <div style="margin-top:16px">
                 <button type="button" class="btn btn-primary" onclick="getLocationByWechat()">获取位置</button>
-    <button type="button" class="btn btn-primary" onclick="scanQRCodeByWechat()">扫一扫</button>
+                <button type="button" class="btn btn-primary" onclick="scanQRCodeByWechat()">扫一扫</button>
            </div>
   
            <p style="margin-top:16px">返回内容</p>
@@ -71,7 +71,7 @@
                 var speed = res.speed; // 速度，以米/每秒计
                 var accuracy = res.accuracy; // 位置精度
                 html = "<h3> 纬度："+ String(latitude) +"</h3>" +  "<h3> 经度："+ String(longitude) +"</h3>" 
-                document.getElementById("content").innerHTML = 
+                document.getElementById("content").innerHTML = html
                 
             }
         });
