@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>微信测试</title>
-    <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
- <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+ <script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>
@@ -24,7 +24,7 @@
          //     if (isWeiXin5() == false) {
          //           alert("您的微信版本低于5.0，无法使用微信支付功能，请先升级！");
         //         }
-       axios.get("http://192.168.1.132:8080/config")
+       axios.get("https://192.168.1.132:8080/config")
          .then((response)=>{
            console.log(response.data)
            this.config = response.data
