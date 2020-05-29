@@ -29,10 +29,11 @@
          .then((response)=>{
            console.log(response.data)
            this.config = response.data
+           wx.config(config);
            
            
        })
-         wx.config(config);
+        
        
          
     };
