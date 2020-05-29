@@ -25,14 +25,21 @@
          //     if (isWeiXin5() == false) {
          //           alert("您的微信版本低于5.0，无法使用微信支付功能，请先升级！");
         //         }
-       axios.get("http://192.168.1.132:8080/config")
-         .then((response)=>{
-           console.log(response.data)
-           this.config = response.data
-           wx.config(config);
+//        axios.get("http://192.168.1.132:8080/config")
+//          .then((response)=>{
+//            console.log(response.data)
+//            this.config = response.data
+//            wx.config(config);
            
            
-       })
+//        })
+         wx.config({
+             debug: true, 
+             appId: "wxe71609adee80aec9", 
+             timestamp: "1590734413", 
+             noncestr: "TZljl2020", 
+             signature: "ea005cfadd9ca1d60337b34e7d8e1b8d84ce6b2e", 
+             jsApiList: ["getLocation", "scanQRCode"]})
         
        
          
