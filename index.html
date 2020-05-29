@@ -7,12 +7,26 @@
     <title>微信测试</title>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
  <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <p>微信测试</p>
-    <button onclick="getLocationByWechat()">获取位置</button>
-    <button onclick="scanQRCodeByWechat()">扫一扫</button>
+       <div class="ehome">
+        <div style="height: 40px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;">
+            微信测试
+        </div>
+   
+    <button type="button" class="btn btn-primary" onclick="getLocationByWechat()">获取位置</button>
+    <button type="button" class="btn btn-primary" onclick="scanQRCodeByWechat()">扫一扫</button>
+    返回内容
     <div id="content"></div>
 
 </body>
@@ -38,13 +52,13 @@
     wx.error(function (res) {
         // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
     });
-    wx.checkJsApi({
-        jsApiList: ['chooseImage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
-        success: function (res) {
-            // 以键值对的形式返回，可用的api值true，不可用为false
-            // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
-        }
-    });
+//     wx.checkJsApi({
+//         jsApiList: ['chooseImage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+//         success: function (res) {
+//             // 以键值对的形式返回，可用的api值true，不可用为false
+//             // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+//         }
+//     });
 
     function getLocationByWechat() {
         wx.getLocation({
@@ -54,6 +68,9 @@
                 var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
                 var speed = res.speed; // 速度，以米/每秒计
                 var accuracy = res.accuracy; // 位置精度
+                html = "<h3> 纬度："+ String(latitude) +"</h3>" +  "<h3> 经度："+ String(longitude) +"</h3>" 
+                document.getElementById("content").innerHTML = 
+                
             }
         });
 
