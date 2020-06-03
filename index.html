@@ -39,7 +39,7 @@
          //     if (isWeiXin5() == false) {
          //           alert("您的微信版本低于5.0，无法使用微信支付功能，请先升级！");
         //         }
-         axios.get("http://192.168.1.132:8080/config")
+         axios.get("/getConfig")
          .then((response)=>{
            console.log(response.data)
            this.config = response.data
