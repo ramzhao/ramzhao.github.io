@@ -36,22 +36,14 @@
 </body>
 <script>
      window.onload = function() {
-         //     if (isWeiXin5() == false) {
-         //           alert("您的微信版本低于5.0，无法使用微信支付功能，请先升级！");
-        //         }
-         axios.get("/getConfig")
-         .then((response)=>{
-           console.log(response.data)
-           this.config = response.data
-           this.wx.config(response.data) 
-
-//        wx.config({
-//         debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-//         appId: 'wx51873f2071ead810', // 必填，公众号的唯一标识
-//         timestamp: '1590738909', // 必填，生成签名的时间戳
-//         nonceStr: 'TZljl2020', // 必填，生成签名的随机串
-//         signature: 'ade9dbbd2c2bab4ff1445c48a3b88ffe17d60efa',// 必填，签名
-//         jsApiList: ['getLocation','scanQRCode'] // 必填，需要使用的JS接口列表
+        
+       wx.config({
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: 'wx51873f2071ead810', // 必填，公众号的唯一标识
+        timestamp: '1591154551', // 必填，生成签名的时间戳
+        nonceStr: 'TZljl2020', // 必填，生成签名的随机串
+        signature: '1d0d2b14b71b1339da11a14ad13354c8f5d38fdf',// 必填，签名
+        jsApiList: ['getLocation','scanQRCode'] // 必填，需要使用的JS接口列表
     });
          
     };
